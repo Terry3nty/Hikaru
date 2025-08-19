@@ -62,7 +62,7 @@ const Project = () => {
                 <a href="https://phoenix-delta-two.vercel.app/" target='_blank' className='border-2 w-28 mt-2 text-purple-400 hover:text-white text-center transition-all'>VIEW</a>
             </div>
             <div className='card'>
-                <img src="/public/fz-Y9ABj_400x400.jpg" alt="Sign" className='img' />
+                <img src="/Hikaru.jpg" alt="Sign" className='img' />
                 <p>
                     <strong><a href="https://a-test-0pzi.onrender.com" target='_blank'>{`${AI}`}</a></strong><br />
                     <b>Role</b> : Developer <br />
