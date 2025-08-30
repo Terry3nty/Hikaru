@@ -30,7 +30,7 @@ const About = () => {
         I am eager to learn about the lastest info & tech in WEB3.
       </p>
       </div>
-      <img src="/kawai.jpg" alt="innerself" className='w-[29rem] rounded-3xl mt-5 md:m-0' />
+      <img src="/sigh.jpg" alt="innerself" className='w-[29rem] rounded-3xl mt-5 md:m-0' />
     </section>
     </>
   )
