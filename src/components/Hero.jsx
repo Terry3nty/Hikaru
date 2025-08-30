@@ -12,7 +12,7 @@ const Hero = () => {
             <button className='border-2 w-[150px] h-[50px] mt-12 text-purple-400 hover:text-white transition-all'>CONTACT ME</button>
             </Link>
         </div>
-        <img src="/kawai.jpg" alt="Main character" className='rounded-t-[50%] w-full md:w-1/2'/>
+        <img src="/sigh.jpg" alt="Main character" className='rounded-t-[50%] w-full md:w-1/2'/>
     </div>
     </>
   )
