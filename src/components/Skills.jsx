@@ -37,6 +37,48 @@ const Skills = () => {
                     <strong>VSCODE</strong>
                 </p>
             </div>
+            <div className='Scard'>
+                <img src="/python.png" alt="Sign" className='img' />
+                <p>
+                    <strong>PYTHON</strong>
+                </p>
+            </div>
+            <div className='Scard'>
+                <img src="/docker.png" alt="Sign" className='img' />
+                <p>
+                    <strong>DOCKER</strong>
+                </p>
+            </div>
+            <div className='Scard'>
+                <img src="/figma.png" alt="Sign" className='img' />
+                <p>
+                    <strong>FIGMA</strong>
+                </p>
+            </div>
+            <div className='Scard'>
+                <img src="/cpp.jpg" alt="Sign" className='img' />
+                <p>
+                    <strong>C++</strong>
+                </p>
+            </div>
+            <div className='Scard'>
+                <img src="/arduino.png" alt="Sign" className='img' />
+                <p>
+                    <strong>ARDUINO</strong>
+                </p>
+            </div>
+            <div className='Scard'>
+                <img src="/wordpress.jpg" alt="Sign" className='img' />
+                <p>
+                    <strong>WORDPRESS</strong>
+                </p>
+            </div>
+            <div className='Scard'>
+                <img src="/n8n.png" alt="Sign" className='img' />
+                <p>
+                    <strong>N8N</strong>
+                </p>
+            </div>
       </div>
     </div>
     </>
