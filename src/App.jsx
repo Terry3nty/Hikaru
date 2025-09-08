@@ -11,7 +11,7 @@ import Contact from './components/Contact'
 const App = () => {
   return (
     <>
-    <div className='mx-5 md:mx-72'>
+    <div className='mx-5 md:mx-60'>
       <Navbar />
       
         <Hero />

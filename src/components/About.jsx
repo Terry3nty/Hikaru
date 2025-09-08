@@ -5,7 +5,7 @@ const About = () => {
     <>
     <h1 className='text-2xl text-white mt-12 pt-20' id='about'><span className='text-purple-700'> # </span> About-me</h1> 
     <hr className='border-gray-300 w-1/2' />
-    <section className='text-white flex flex-col md:flex-row justify-evenly mt-6'>
+    <section className='text-white flex flex-col gap-20 md:grid md:grid-cols-2 mt-6'>
       <div className='flex flex-col justify-center'>
         <pre className='font-extrabold'>
           Hello, i'm Hikaru! <br /><br/>

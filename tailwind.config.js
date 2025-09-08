@@ -18,6 +18,9 @@ export default {
         monsieur: ['"Monsieur La Doulaise"', 'cursive'],
         nabla: ['Nabla', 'cursive'],
       },
+      screens : {
+        md : "800px",
+      }
     },
   },
   plugins: [],
