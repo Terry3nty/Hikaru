@@ -9,9 +9,11 @@ import About from './components/About'
 import Contact from './components/Contact'
 
 const App = () => {
+
   return (
     <>
-    <div className='mx-5 md:mx-60'>
+    <p className='text-white'>helo</p>
+    <div className='mx-5 md:mx-64'>
       <Navbar />
       
         <Hero />

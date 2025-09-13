@@ -17,3 +17,7 @@
 .img{
     @apply mb-8 rounded-2xl
 }
+
+.bar{
+    @apply text-white
+}

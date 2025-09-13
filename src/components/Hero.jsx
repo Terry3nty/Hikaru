@@ -2,13 +2,15 @@ import React from 'react'
 import { Link } from "react-scroll";
 
 const Hero = () => {
+
   return (
     <div
-      className="flex flex-col-reverse md:flex-row justify-evenly items-center mt-10 md:mt-14 text-white pt-10 md:pt-20 px-4 md:px-0"
+      className="flex flex-col-reverse justify-center items-center mt-10 md:mt-14 text-white pt-10 md:pt-20 px-4 md:px-0"
       id="home"
+      data-aos = "fade up"
     >
-      <div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/2">
-        <h1 className="font-Lexand text-3xl sm:text-4xl md:text-5xl text-white text-center md:text-left">
+      <div className="flex flex-col justify-center items-center md:items-center w-full md:w-1/2">
+        <h1 className="font-Lexand text-3xl sm:text-4xl md:text-5xl text-white text-center md:text-left md:mt-11">
           Grand <span className="hover:text-purple-700 transition-all"> Rising </span>
         </h1>
         <p className="mt-4 md:mt-5 text-base sm:text-lg md:text-xl text-center md:text-left">
