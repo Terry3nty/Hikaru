@@ -12,8 +12,7 @@ const App = () => {
 
   return (
     <>
-    <p className='text-white'>helo</p>
-    <div className='mx-5 md:mx-64'>
+    <div className='mx-5 md:mx-64 noselect'>
       <Navbar />
       
         <Hero />

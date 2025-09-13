@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
   return (
-      <nav className='flex flex-row text-white gap-14 justify-evenly fixed top-0 left-0 z-50 bg-black px-6 py-4 shadow-md w-full'>
+      <nav className='flex flex-row text-white gap-14 justify-evenly fixed top-0 left-0 z-50 bg-black px-6 py-4 shadow-md w-full cursor-pointer'>
         
         {/* Name */}
         <h1 className="font-Lexand text-bold text-2xl tracking-widest">HIKARU</h1>

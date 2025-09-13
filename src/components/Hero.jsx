@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-scroll";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6"
 
 const Hero = () => {
 
@@ -9,6 +10,19 @@ const Hero = () => {
       id="home"
       data-aos = "fade up"
     >
+
+      <div className="flex gap-4 text-3xl text-white mt-8">
+        <a href="https://github.com/Terry3nty" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
+          <FaGithub />
+        </a>
+        <a href="https://linkedin.com/in/hikaru-san" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
+         <FaLinkedin />
+        </a>
+        <a href="https://x.com/hikaru___san" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
+         <FaXTwitter />
+        </a>
+      </div>
+
       <div className="flex flex-col justify-center items-center md:items-center w-full md:w-1/2">
         <h1 className="font-Lexand text-3xl sm:text-4xl md:text-5xl text-white text-center md:text-left md:mt-11">
           Grand <span className="hover:text-purple-700 transition-all"> Rising </span>

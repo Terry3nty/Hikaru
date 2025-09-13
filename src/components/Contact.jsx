@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6"
 
 const Contact = () => {
 
@@ -71,7 +72,22 @@ const Contact = () => {
             className="border rounded-lg p-2 w-full md:w-1/2 text-black border-purple-400 border-4"
           /> <br />
 
-          <button className='border-2 w-[150px] h-[50px] mt-5 text-purple-400 hover:text-white transition-all' type='submit'>CONTACT ME</button>
+          <div className='flex flex-col md:flex-row gap-5'>
+            <button className='border-2 w-[150px] h-[50px] mt-5 text-purple-400 hover:text-white transition-all' type='submit'>CONTACT ME</button>
+
+                <div className="flex gap-4 text-3xl text-white mt-7">
+                  <a href="https://github.com/Terry3nty" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
+                    <FaGithub />
+                  </a>
+                  <a href="https://linkedin.com/in/hikaru-san" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
+                    <FaLinkedin />
+                  </a>
+                  <a href="https://x.com/hikaru___san" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
+                    <FaXTwitter />
+                  </a>
+                </div>
+          </div>
+
         </form>
       </div>
     </section>
