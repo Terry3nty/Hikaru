@@ -26,7 +26,7 @@ const Hero = () => {
         <img
           src="/sigh.jpg"
           alt="Main character"
-          className="rounded-t-[50%] w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 object-cover"
+          className="rounded-t-[50%] rounded-b-2xl w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 object-cover"
         />
       </div>
     </div>
