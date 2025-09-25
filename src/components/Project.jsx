@@ -30,12 +30,12 @@ const projects = [
     show: true, // hidden
   },
   {
-    name: "Ai Writer",
-    img: "/sigh.jpg",
-    alt: "Ai Writer",
-    link: "https://a-test-0pzi.onrender.com",
-    role: "Developer",
-    experience: "Just Exploring the vast possibilities of what i could create & build, it was great.",
+    name: 'Stacy Ai',
+    img: '/Katsco.jpg',
+    alt: "Stacy Ai",
+    link: 'https://stacy-ai-website.vercel.app/',
+    role: 'Developer',
+    experience: 'Authentic bond with both admins and fellow developers, community members & team members',
     show: true,
   },
 ];
