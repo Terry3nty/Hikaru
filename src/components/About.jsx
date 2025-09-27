@@ -17,7 +17,7 @@ const About = () => {
         web experiences. <br/><br/>
 
         I am a Mathematics<br/>
-        undergraduate from FUNAAB. I am very<br/>
+        undergraduate. I am very<br/>
         passionate about improving my coding skills &<br/>
         developing applications & websites & Ai automations.<br/>
         I always strive to<br/>

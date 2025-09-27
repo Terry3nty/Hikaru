@@ -1,24 +1,24 @@
 import React from 'react'
 
-const skillInfo = [
-    { img: "/trio.jpg", text: "HTML/CSS/JS" },
-    { img: "/tailwind.png", text: "TAILWINDCSS" },
-    { img: "/React.svg", text: "REACT.JS/VITE" },
-    { img: "/python.png", text: "PYTHON" },
-    { img: "/cpp.jpg", text: "C++" },
-    { img: "/n8n.png", text: "N8N" },
+const toolsInfo = [
+    { img: "/vscode.png", text: "VSCODE" },
+    { img: "/arduino.png", text: "ARDUINO" },
+    { img: "/booyah.png", text: "GIT/GITHUB" },
+    { img: "/docker.png", text: "DOCKER" },
+    { img: "/figma.png", text: "FIGMA" },
+    { img: "/wordpress.jpg", text: "WORDPRESS" },
 ]
 
-const Skills = () => {
-    return (
+const Tools = () => {
+  return (
         <>
-            <div className='mt-12 pt-20' id='skills'>
+            <div className='mt-12 pt-20' id='tools'>
                 <h1 className='text-2xl text-white'>
-                    <span className='text-purple-700'> # </span> Skills
+                    <span className='text-purple-700'> # </span> Tools
                 </h1>
                 <hr className='border-gray-300 w-1/2' />
                 <div className='flex md:flex-row flex-wrap justify-center text-white mt-5'>
-                    {skillInfo.map((skill, idx) => (
+                    {toolsInfo.map((skill, idx) => (
                         <div className='Scard' key={idx}>
                             <img src={skill.img} alt="Sign" className='img' />
                             <p>
@@ -29,7 +29,7 @@ const Skills = () => {
                 </div>
             </div>
         </>
-    )
+  )
 }
 
-export default Skills
+export default Tools

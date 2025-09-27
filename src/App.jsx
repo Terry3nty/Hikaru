@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import Project from './components/Project'
 import Products from './components/Products'
 import Skills from './components/Skills'
+import Tools from './components/Tools'
 import About from './components/About'
 import Contact from './components/Contact'
 
@@ -26,6 +27,7 @@ const App = () => {
       </Routes>
 
       <Skills />
+      <Tools />
       <About />
       <Contact />
     </div>
