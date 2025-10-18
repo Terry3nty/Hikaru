@@ -22,7 +22,7 @@ const web3Products = [
         name: 'Katsco Group',
         img: '/Katsco.jpg',
         link: 'https://x.com/KatsCoGroup',
-        role: 'Developer',
+        role: 'Developer, Business Developer',
         experience: 'Quality connection with both admins and community members. Got hands on both new technologies and knowledge to further advance together with fellow developer colleagues to get the job done',
         btn: 'VIEW',
     },
@@ -42,6 +42,14 @@ const web3Products = [
         experience: 'Quality connection with both admins,community members & Game itself. Experienced quality & addictive gameplay, got in a creator contest & was among the winners',
         btn: 'VIEW',
     },
+    {
+        name:'Gossiper Ai',
+        img: '/gossiper-logo-white.png',
+        link:'https://gossiper-ai.vercel.app',
+        role: 'Frontend Developer',
+        experience : 'Authentic bond with team members and developers, got to use new technology too',
+        btn:'VIEW',
+    }
 ];
 
 const techProducts = [
@@ -50,7 +58,7 @@ const techProducts = [
         name: 'Middlemint',
         img: '/MIDDLEMINT.png',
         link: 'https://middlemint-mdmt.vercel.app/',
-        role: 'BD, Dev & DevRel',
+        role: 'Developer',
         experience: 'Quality connection with both admins and community members.',
         btn: 'VIEW',
     },

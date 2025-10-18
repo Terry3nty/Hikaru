@@ -38,6 +38,14 @@ const projects = [
     experience: 'Authentic bond with both admins and fellow developers, community members & team members',
     show: true,
   },
+  {
+    name:'Gossiper Ai',
+    img: '/gossiper-logo-white.png',
+    link:'https://gossiper-ai.vercel.app',
+    role: 'Frontend Developer',
+    experience : 'Authentic bond with team members and developers, got to use new technology too',
+    show: true,
+  }
 ];
 
 const Project = () => (
