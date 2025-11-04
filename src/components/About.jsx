@@ -11,8 +11,8 @@ const About = () => {
           Hello, i'm Hikaru! <br /><br/>
         </pre> 
       <p>
-        I'm a self-taught front-end developer based in<br/>
-        Ogun-state Nigeria. I can develop responsive websites<br/>
+        I'm a self-taught front-end developer<br/>
+        I can develop responsive websites<br/>
         from scratch and raise them into modern user-friendly<br/>
         web experiences. <br/><br/>
 
