@@ -2,22 +2,261 @@
 @tailwind components;
 @tailwind utilities;
 
-.card{
-    @apply flex flex-col m-1 md:m-5 border-[1px] hover:border-purple-500 transition-all p-5 max-w-[100%] md:w-80
+/* Custom CSS Variables for Premium Theme */
+:root {
+  --purple-glow: rgba(168, 85, 247, 0.6);
+  --purple-gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #7c3aed 100%);
 }
 
-.Scard{
-    @apply flex flex-col border-[1px] hover:border-purple-500 transition-all p-5 max-w-[100%] w-40
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.input{
-    @apply text-black p-2 rounded-md border-purple-400 border-4
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
 }
 
-.img{
-    @apply mb-8 rounded-2xl
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c3aed 0%, #a855f7 100%);
+  border-radius: 4px;
 }
 
-.bar{
-    @apply text-white
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8b5cf6 0%, #c084fc 100%);
 }
+
+/* Selection Color */
+::selection {
+  background: rgba(168, 85, 247, 0.4);
+  color: white;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base Body Styles */
+body {
+  background: #000000;
+  background-image: radial-gradient(ellipse at center top, rgba(88, 28, 135, 0.15) 0%, transparent 60%);
+  min-height: 100vh;
+}
+
+/* Blinking Cursor Animation for Typewriter */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s ease-in-out infinite;
+}
+
+/* Slow Pulse Animation */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Glassmorphism Utility Classes */
+.glass {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.1);
+}
+
+.glass-card {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  background: rgba(30, 20, 40, 0.7);
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15),
+              0 0 60px rgba(168, 85, 247, 0.05);
+  transform: translateY(-4px);
+}
+
+/* Gradient Border Effect */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(135deg, #7c3aed, #a855f7, #7c3aed) border-box;
+  border: 1px solid transparent;
+}
+
+/* Glow Effect on Hover */
+.glow-hover {
+  transition: all 0.3s ease;
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5),
+              0 0 40px rgba(168, 85, 247, 0.3);
+}
+
+/* Text Glow */
+.text-glow {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5),
+               0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+/* Premium Card Styles */
+.card {
+  @apply flex flex-col p-6 rounded-xl max-w-[100%] md:w-80;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  background: rgba(30, 20, 40, 0.7);
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.2),
+              0 0 60px rgba(168, 85, 247, 0.1),
+              inset 0 0 30px rgba(168, 85, 247, 0.05);
+  transform: translateY(-6px) scale(1.01);
+}
+
+/* Skills/Tools Cards */
+.Scard {
+  @apply flex flex-col p-5 rounded-xl w-36 md:w-40;
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(168, 85, 247, 0.1);
+  transition: all 0.3s ease;
+}
+
+.Scard:hover {
+  background: rgba(30, 20, 40, 0.6);
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Input Styles */
+.input {
+  @apply p-3 rounded-lg w-full md:w-96;
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(168, 85, 247, 0.8);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3),
+              0 0 30px rgba(168, 85, 247, 0.1);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Image Styles */
+.img {
+  @apply mb-5 rounded-xl object-cover;
+  transition: all 0.4s ease;
+}
+
+.card:hover .img,
+.Scard:hover .img {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* Section Headers */
+.section-header {
+  @apply text-2xl md:text-3xl text-white font-lexendDeca font-bold mb-2;
+}
+
+.section-divider {
+  @apply border-0 h-[1px] w-32 md:w-48 mb-8;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.5), transparent);
+}
+
+/* Button Primary */
+.btn-primary {
+  @apply relative px-6 py-3 font-lexendDeca font-medium tracking-wider overflow-hidden rounded-lg transition-all duration-300;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #7c3aed 100%);
+  border-radius: 0.5rem;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: #000;
+  border-radius: 0.45rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary span {
+  position: relative;
+  z-index: 1;
+  color: #a855f7;
+  transition: color 0.3s ease;
+}
+
+.btn-primary:hover::after {
+  background: rgba(88, 28, 135, 0.5);
+}
+
+.btn-primary:hover span {
+  color: white;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+}
+
+/* No Select */
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Staggered Delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }

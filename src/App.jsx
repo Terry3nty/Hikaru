@@ -1,5 +1,5 @@
 import React from 'react'
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Project from './components/Project'
@@ -10,13 +10,10 @@ import About from './components/About'
 import Contact from './components/Contact'
 
 const App = () => {
-
   return (
-    <>
-    <div className='mx-5 md:mx-64 noselect'>
+    <div className='mx-5 md:mx-16 lg:mx-32 xl:mx-64 noselect'>
       <Navbar />
-      
-        <Hero />
+      <Hero />
       <Routes>
         <Route path="/" element={
           <>
@@ -25,13 +22,11 @@ const App = () => {
         } />
         <Route path="/products" element={<Products />} />
       </Routes>
-
       <Skills />
       <Tools />
       <About />
       <Contact />
     </div>
-    </>
   )
 }
 
