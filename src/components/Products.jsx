@@ -143,7 +143,7 @@ const allProducts = [...web3Products, ...techProducts, ...hobbyProducts];
 
 const ProductCard = ({ product, index }) => (
     <div
-        className="group relative bg-gradient-to-br from-purple-900/20 via-black/40 to-purple-900/10 rounded-2xl overflow-hidden border border-purple-500/10 hover:border-purple-500/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(168,85,247,0.15)] hover:-translate-y-2"
+        className="group relative bg-gradient-to-br from-orange-900/20 via-black/40 to-orange-900/10 rounded-2xl overflow-hidden border border-orange-500/10 hover:border-orange-500/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(249,115,22,0.15)] hover:-translate-y-2"
         style={{ animationDelay: `${index * 50}ms` }}
     >
         {/* Image Container */}
@@ -158,7 +158,7 @@ const ProductCard = ({ product, index }) => (
 
             {/* Category Badge */}
             <div className="absolute top-3 right-3">
-                <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-purple-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-purple-300">
+                <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full text-orange-300">
                     {product.category}
                 </span>
             </div>
@@ -173,19 +173,19 @@ const ProductCard = ({ product, index }) => (
             )}
 
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-purple-600/0 group-hover:bg-purple-600/10 transition-all duration-500" />
+            <div className="absolute inset-0 bg-orange-600/0 group-hover:bg-orange-600/10 transition-all duration-500" />
         </div>
 
         {/* Content */}
         <div className="p-5 space-y-3">
             {/* Title */}
-            <h3 className="font-lexendDeca font-bold text-lg text-white group-hover:text-purple-300 transition-colors duration-300 line-clamp-1">
+            <h3 className="font-lexendDeca font-bold text-lg text-white group-hover:text-orange-300 transition-colors duration-300 line-clamp-1">
                 {product.name}
             </h3>
 
             {/* Role Badge */}
             <div className="flex items-center gap-2">
-                <span className="text-xs text-purple-400 font-medium">{product.role}</span>
+                <span className="text-xs text-orange-400 font-medium">{product.role}</span>
             </div>
 
             {/* Experience */}
@@ -200,7 +200,7 @@ const ProductCard = ({ product, index }) => (
                 rel="noopener noreferrer"
                 className={`inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${product.comingSoon
                         ? 'bg-white/5 text-white/40 cursor-not-allowed'
-                        : 'bg-purple-500/10 text-purple-400 border border-purple-500/30 hover:bg-purple-500/20 hover:border-purple-400 hover:text-white group/btn'
+                        : 'bg-orange-500/10 text-orange-400 border border-orange-500/30 hover:bg-orange-500/20 hover:border-orange-400 hover:text-white group/btn'
                     }`}
                 onClick={product.comingSoon ? (e) => e.preventDefault() : undefined}
             >
@@ -212,7 +212,7 @@ const ProductCard = ({ product, index }) => (
         </div>
 
         {/* Decorative corner glow */}
-        <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     </div>
 );
 
@@ -229,7 +229,7 @@ const Products = () => {
             {/* Back Navigation */}
             <Link
                 to="/"
-                className="inline-flex items-center gap-2 text-white/60 hover:text-purple-400 transition-colors duration-300 mb-8 group"
+                className="inline-flex items-center gap-2 text-white/60 hover:text-orange-400 transition-colors duration-300 mb-8 group"
             >
                 <HiArrowLeft className="group-hover:-translate-x-1 transition-transform duration-300" />
                 Back to Home
@@ -239,11 +239,11 @@ const Products = () => {
             <div className="mb-12">
                 <div className="flex items-center gap-4 mb-4">
                     <h1 className="text-3xl md:text-4xl font-bold">
-                        <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-purple-500 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-orange-400 via-orange-300 to-orange-500 bg-clip-text text-transparent">
                             All Projects
                         </span>
                     </h1>
-                    <div className="flex-1 h-[1px] max-w-[200px] bg-gradient-to-r from-purple-500/50 to-transparent" />
+                    <div className="flex-1 h-[1px] max-w-[200px] bg-gradient-to-r from-orange-500/50 to-transparent" />
                 </div>
                 <p className="text-white/50 max-w-2xl">
                     A collection of projects, collaborations, and experiments I've been part of across Web3, Tech, and personal ventures.
@@ -257,14 +257,14 @@ const Products = () => {
                         key={cat.id}
                         onClick={() => setActiveCategory(cat.id)}
                         className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 flex items-center gap-2 ${activeCategory === cat.id
-                                ? 'bg-purple-500/20 border border-purple-500/50 text-purple-300 shadow-[0_0_20px_rgba(168,85,247,0.2)]'
-                                : 'bg-white/5 border border-white/10 text-white/60 hover:border-purple-500/30 hover:text-purple-400'
+                                ? 'bg-orange-500/20 border border-orange-500/50 text-orange-300 shadow-[0_0_20px_rgba(249,115,22,0.2)]'
+                                : 'bg-white/5 border border-white/10 text-white/60 hover:border-orange-500/30 hover:text-orange-400'
                             }`}
                     >
                         <span className="text-xs">{cat.icon}</span>
                         {cat.label}
                         {activeCategory === cat.id && (
-                            <span className="ml-1 px-1.5 py-0.5 bg-purple-500/30 rounded text-xs">
+                            <span className="ml-1 px-1.5 py-0.5 bg-orange-500/30 rounded text-xs">
                                 {cat.id === 'all' ? allProducts.length : filteredProducts.length}
                             </span>
                         )}
@@ -275,7 +275,7 @@ const Products = () => {
             {/* Stats Bar */}
             <div className="flex flex-wrap gap-6 mb-10 p-4 bg-white/5 rounded-xl border border-white/10">
                 <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-purple-400" />
+                    <div className="w-2 h-2 rounded-full bg-orange-400" />
                     <span className="text-white/50 text-sm">
                         <span className="text-white font-medium">{web3Products.length}</span> Web3 Projects
                     </span>
@@ -309,14 +309,14 @@ const Products = () => {
             )}
 
             {/* Footer CTA */}
-            <div className="mt-16 text-center py-12 bg-gradient-to-r from-purple-900/20 via-purple-800/10 to-purple-900/20 rounded-2xl border border-purple-500/10">
+            <div className="mt-16 text-center py-12 bg-gradient-to-r from-orange-900/20 via-orange-800/10 to-orange-900/20 rounded-2xl border border-orange-500/10">
                 <h3 className="text-xl font-bold text-white mb-3">Interested in working together?</h3>
                 <p className="text-white/50 mb-6 max-w-md mx-auto">
                     I'm always open to discussing new projects and opportunities.
                 </p>
                 <Link
                     to="/"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500/20 border border-purple-500/40 rounded-xl text-purple-300 hover:bg-purple-500/30 hover:border-purple-400 hover:text-white transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500/20 border border-orange-500/40 rounded-xl text-orange-300 hover:bg-orange-500/30 hover:border-orange-400 hover:text-white transition-all duration-300"
                 >
                     Get in Touch
                     <span>→</span>

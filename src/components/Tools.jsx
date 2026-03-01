@@ -11,36 +11,37 @@ const toolsInfo = [
 
 const Tools = () => {
     return (
-        <section className='mt-16 md:mt-24 pt-8' id='tools'>
+        <section className='mt-16 md:mt-24 pt-8 font-inter z-10 relative' id='tools'>
             {/* Section Header */}
-            <div className="flex items-center gap-4 mb-8">
-                <h1 className="text-2xl md:text-3xl font-bold text-white font-lexendDeca">
-                    <span className="text-purple-500">#</span> Tools
+            <div className="flex items-center gap-4 mb-10">
+                <h1 className="text-3xl md:text-4xl font-black text-white tracking-tight">
+                    <span className="text-orange-500 mr-2">/</span> Tools
                 </h1>
-                <div className="flex-1 h-[1px] max-w-[200px] bg-gradient-to-r from-purple-500/50 to-transparent" />
+                <div className="flex-1 h-[1px] max-w-[300px] bg-gradient-to-r from-orange-500/50 to-transparent" />
             </div>
 
             {/* Tools Grid */}
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6'>
                 {toolsInfo.map((tool, idx) => (
                     <div
-                        className='Scard group text-center'
+                        className='Scard group text-center relative overflow-hidden'
                         key={idx}
                         style={{ animationDelay: `${idx * 80}ms` }}
                     >
+                        {/* Glow overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-orange-500/0 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
                         {/* Tool Icon */}
-                        <div className="relative overflow-hidden rounded-lg mb-4 mx-auto w-16 h-16 md:w-20 md:h-20">
+                        <div className="relative overflow-hidden rounded-md mb-4 mx-auto w-16 h-16 md:w-20 md:h-20 bg-black/40 p-2 border border-white/5 group-hover:border-orange-500/30 transition-colors duration-500">
                             <img
                                 src={tool.img}
                                 alt={tool.text}
-                                className='w-full h-full object-cover transition-all duration-400 group-hover:scale-110'
+                                className='w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 grayscale-[20%] group-hover:grayscale-0'
                             />
-                            {/* Glow overlay */}
-                            <div className="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/10 transition-all duration-300" />
                         </div>
 
                         {/* Tool Name */}
-                        <p className='text-sm font-medium text-white/80 group-hover:text-purple-300 transition-colors duration-300'>
+                        <p className='text-xs font-bold tracking-wider uppercase text-white/70 group-hover:text-orange-400 transition-colors duration-500'>
                             {tool.text}
                         </p>
                     </div>

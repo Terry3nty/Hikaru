@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-scroll";
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6"
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6"
 
-const roles = ["WEB DEVELOPER", "MOBILE DEVELOPER" , "WEB3 DEVELOPER"];
+const roles = ["WEB DEVELOPER", "MOBILE DEVELOPER", "WEB3 DEVELOPER"];
 
 const useTypewriter = (words, typingSpeed = 100, deletingSpeed = 50, pauseTime = 2000) => {
   const [displayText, setDisplayText] = useState('');
@@ -51,41 +51,38 @@ const Hero = () => {
 
   return (
     <section
-      className="relative flex flex-col items-center justify-center min-h-[90vh] text-white pt-24 md:pt-32 px-4 md:px-0 overflow-hidden"
+      className="relative flex flex-col items-center justify-center min-h-[100vh] text-white pt-24 md:pt-32 px-4 md:px-0 overflow-hidden"
       id="home"
     >
-      {/* Subtle gradient orb background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none" />
-
       <div className="relative z-10 flex flex-col items-center gap-8">
-        {/* Profile Image with glow ring */}
-        <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-purple-400 to-purple-600 rounded-full blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow" />
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full opacity-80" />
+        {/* Profile Image with intense glow ring */}
+        <div className="relative group mt-8">
+          <div className="absolute -inset-2 bg-gradient-to-r from-orange-600 via-orange-400 to-orange-600 rounded-full blur-xl opacity-40 group-hover:opacity-100 transition-opacity duration-700 animate-pulse-slow" />
+          <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full opacity-80" />
           <img
             src="/sigh.jpg"
             alt="Hikaru Sama"
-            className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 object-cover rounded-full border-2 border-purple-400/50"
+            className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 object-cover rounded-full border-2 border-orange-400/50"
           />
         </div>
 
         {/* Name and Title */}
-        <div className="flex flex-col items-center gap-4">
-          <p className='text-purple-400/80 font-lexendDeca font-medium text-sm md:text-base tracking-widest uppercase'>
-            Hello, my name is
+        <div className="flex flex-col items-center gap-6 mt-4">
+          <p className='text-orange-400/80 font-inter font-medium text-sm md:text-base tracking-[0.3em] uppercase'>
+            CRAFTING DIGITAL EXPERIENCES
           </p>
 
-          <h1 className="font-lexend text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center bg-gradient-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
-            Hikaru Sama
+          <h1 className="font-inter text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center tracking-tight bg-gradient-to-br from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent drop-shadow-sm">
+            Trinity Adeleye
           </h1>
 
           {/* Typewriter Effect */}
           <div className="h-8 md:h-10 flex items-center justify-center">
             <p className="text-lg sm:text-xl md:text-2xl text-center font-lexendDeca">
               a{' '}
-              <span className="text-purple-400 font-bold inline-block min-w-[200px] md:min-w-[280px]">
+              <span className="text-orange-400 font-bold inline-block min-w-[200px] md:min-w-[280px]">
                 {typewriterText}
-                <span className="animate-blink text-purple-300 ml-0.5">|</span>
+                <span className="animate-blink text-orange-300 ml-0.5">|</span>
               </span>
             </p>
           </div>
@@ -93,14 +90,13 @@ const Hero = () => {
 
         {/* CTA Button */}
         <Link to="contact" smooth={true} duration={500}>
-          <button className="group relative mt-4 md:mt-8 px-8 py-3 font-lexendDeca font-medium tracking-wider overflow-hidden rounded-lg transition-all duration-300">
-            {/* Button gradient border */}
-            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 rounded-lg" />
-            <span className="absolute inset-[1px] bg-black rounded-lg transition-all duration-300 group-hover:bg-purple-900/50" />
+          <button className="group relative mt-8 md:mt-12 px-10 py-4 font-inter font-bold tracking-[0.2em] overflow-hidden rounded-sm transition-all duration-500 bg-white text-black hover:bg-transparent">
+            {/* Button gradient border on hover */}
+            <span className="absolute inset-0 border border-transparent group-hover:border-orange-500 transition-colors duration-500" />
             {/* Glow effect */}
-            <span className="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/20 blur-xl transition-all duration-300" />
-            <span className="relative text-purple-400 group-hover:text-white transition-colors duration-300">
-              CONTACT ME
+            <span className="absolute inset-0 bg-orange-500/0 group-hover:bg-orange-500/10 blur-xl transition-all duration-500" />
+            <span className="relative group-hover:text-orange-400 transition-colors duration-500">
+              LET'S COLLABORATE
             </span>
           </button>
         </Link>
@@ -111,15 +107,15 @@ const Hero = () => {
             href="https://github.com/Terry3nty"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.8)] transition-all duration-300"
+            className="hover:text-orange-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.8)] transition-all duration-300"
           >
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/hikaru-san-1b195735b"
+            href="https://www.linkedin.com/in/trinity-adeleye-1b195735b"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.8)] transition-all duration-300"
+            className="hover:text-orange-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.8)] transition-all duration-300"
           >
             <FaLinkedin />
           </a>
@@ -127,9 +123,17 @@ const Hero = () => {
             href="https://x.com/hikaru___san"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.8)] transition-all duration-300"
+            className="hover:text-orange-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.8)] transition-all duration-300"
           >
             <FaXTwitter />
+          </a>
+          <a
+            href="https://www.instagram.com/hikaru____sama"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-orange-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.8)] transition-all duration-300"
+          >
+            <FaInstagram />
           </a>
         </div>
       </div>

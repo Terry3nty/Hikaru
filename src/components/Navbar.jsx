@@ -32,34 +32,33 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 ${scrolled
-                    ? "py-3 bg-black/80 backdrop-blur-xl border-b border-purple-500/10 shadow-lg shadow-purple-900/10"
-                    : "py-5 bg-transparent"
+            className={`fixed top-0 left-0 z-50 w-full transition-all duration-700 ${scrolled
+                ? "py-4 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+                : "py-6 bg-transparent"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
-                <h1 className="font-lexend text-2xl md:text-3xl font-bold tracking-wider cursor-pointer group">
-                    <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-purple-400 bg-clip-text text-transparent group-hover:from-white group-hover:via-purple-200 group-hover:to-white transition-all duration-300">
+                <h1 className="font-inter text-2xl md:text-3xl font-black tracking-tighter cursor-pointer group flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(234,88,12,0.8)]" />
+                    <span className="text-white group-hover:text-orange-100 transition-colors duration-500">
                         HIKARU
                     </span>
                 </h1>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex items-center gap-8 font-lexendDeca text-sm tracking-wider">
+                <ul className="hidden md:flex items-center gap-10 font-inter text-xs font-bold tracking-[0.2em] uppercase">
                     {navLinks.map((link, idx) => (
                         <li key={idx}>
                             <Link
                                 to={link.to}
                                 smooth={true}
                                 duration={500}
-                                className="relative text-white/70 hover:text-white transition-colors duration-300 cursor-pointer group py-2"
+                                className="relative text-white/50 hover:text-white transition-colors duration-500 cursor-pointer group py-2"
                             >
                                 <span className="relative z-10">{link.label}</span>
-                                {/* Underline effect */}
-                                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-purple-500 to-purple-400 group-hover:w-full transition-all duration-300" />
-                                {/* Glow dot */}
-                                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-[2px]" />
+                                {/* Glow dot on hover */}
+                                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_8px_rgba(234,88,12,0.8)]" />
                             </Link>
                         </li>
                     ))}
@@ -68,7 +67,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden text-white/80 hover:text-purple-400 transition-colors duration-300 text-2xl"
+                    className="md:hidden text-white/80 hover:text-orange-400 transition-colors duration-300 text-2xl"
                 >
                     {isOpen ? <HiX /> : <HiMenuAlt3 />}
                 </button>
@@ -76,11 +75,11 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             <div
-                className={`md:hidden absolute top-full left-0 w-full overflow-hidden transition-all duration-500 ease-out ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+                className={`md:hidden absolute top-full left-0 w-full overflow-hidden transition-all duration-700 ease-out ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
                     }`}
             >
-                <div className="bg-black/95 backdrop-blur-xl border-b border-purple-500/20 px-6 py-6">
-                    <ul className="flex flex-col gap-4 font-lexendDeca text-sm tracking-wider">
+                <div className="bg-[#050505]/95 backdrop-blur-2xl border-b border-white/5 px-6 py-8">
+                    <ul className="flex flex-col gap-6 font-inter text-xs font-bold tracking-[0.2em] uppercase">
                         {navLinks.map((link, idx) => (
                             <li key={idx}>
                                 <Link
@@ -88,8 +87,9 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={500}
                                     onClick={closeMenu}
-                                    className="block py-2 text-white/70 hover:text-purple-400 hover:pl-4 transition-all duration-300 border-l-2 border-transparent hover:border-purple-500 pl-2"
+                                    className="block py-2 text-white/50 hover:text-white hover:translate-x-2 transition-all duration-500 flex items-center gap-4 group"
                                 >
+                                    <span className="w-1 h-1 rounded-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_8px_rgba(234,88,12,0.8)]" />
                                     {link.label}
                                 </Link>
                             </li>
