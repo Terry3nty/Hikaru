@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { HiArrowLeft, HiExternalLink } from 'react-icons/hi';
 
 const web3Products = [
     {
-    name: 'Fostrum',
-    img: '/fostrum.png',
-    link: 'https://fostrum.xyz',
-    role: 'Frontend Developer',
-    experience: 'Great joy and enthusiasm as we brought "that idea" to life',
-     category: 'web3',
+        name: 'Fostrum',
+        img: '/fostrum.png',
+        link: 'https://fostrum.xyz',
+        role: 'Frontend Developer',
+        experience: 'Great joy and enthusiasm as we brought "that idea" to life',
+        category: 'web3',
     },
     {
         name: 'Sign',
@@ -199,8 +200,8 @@ const ProductCard = ({ product, index }) => (
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${product.comingSoon
-                        ? 'bg-white/5 text-white/40 cursor-not-allowed'
-                        : 'bg-orange-500/10 text-orange-400 border border-orange-500/30 hover:bg-orange-500/20 hover:border-orange-400 hover:text-white group/btn'
+                    ? 'bg-white/5 text-white/40 cursor-not-allowed'
+                    : 'bg-orange-500/10 text-orange-400 border border-orange-500/30 hover:bg-orange-500/20 hover:border-orange-400 hover:text-white group/btn'
                     }`}
                 onClick={product.comingSoon ? (e) => e.preventDefault() : undefined}
             >
@@ -257,8 +258,8 @@ const Products = () => {
                         key={cat.id}
                         onClick={() => setActiveCategory(cat.id)}
                         className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 flex items-center gap-2 ${activeCategory === cat.id
-                                ? 'bg-orange-500/20 border border-orange-500/50 text-orange-300 shadow-[0_0_20px_rgba(249,115,22,0.2)]'
-                                : 'bg-white/5 border border-white/10 text-white/60 hover:border-orange-500/30 hover:text-orange-400'
+                            ? 'bg-orange-500/20 border border-orange-500/50 text-orange-300 shadow-[0_0_20px_rgba(249,115,22,0.2)]'
+                            : 'bg-white/5 border border-white/10 text-white/60 hover:border-orange-500/30 hover:text-orange-400'
                             }`}
                     >
                         <span className="text-xs">{cat.icon}</span>
@@ -314,13 +315,15 @@ const Products = () => {
                 <p className="text-white/50 mb-6 max-w-md mx-auto">
                     I'm always open to discussing new projects and opportunities.
                 </p>
-                <Link
-                    to="/"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500/20 border border-orange-500/40 rounded-xl text-orange-300 hover:bg-orange-500/30 hover:border-orange-400 hover:text-white transition-all duration-300"
+                <ScrollLink
+                    to="contact"
+                    smooth={true}
+                    duration={500}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500/20 border border-orange-500/40 rounded-xl text-orange-300 hover:bg-orange-500/30 hover:border-orange-400 hover:text-white transition-all duration-300 cursor-pointer"
                 >
                     Get in Touch
                     <span>→</span>
-                </Link>
+                </ScrollLink>
             </div>
         </section>
     );
