@@ -72,7 +72,7 @@ const Hero = () => {
             CRAFTING DIGITAL EXPERIENCES
           </p>
 
-          <h1 className="font-inter text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center tracking-tight bg-gradient-to-br from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent drop-shadow-sm">
+          <h1 className="font-inter text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-center tracking-tight bg-gradient-to-br from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent drop-shadow-sm pb-2 sm:pb-4">
             Trinity Adeleye
           </h1>
 
