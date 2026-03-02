@@ -66,7 +66,7 @@ const techProducts = [
     {
         name: 'Hamzatronics Technologies',
         img: '/HAMZATRONICS.png',
-        link: 'https://hamzatronics-technologies.vercel.app/',
+        link: 'https://hamzatronics.com',
         role: 'Fullstack Developer',
         experience: 'Intriguing Experience & quality knowledge acquired solving the bugs.',
         category: 'tech',
