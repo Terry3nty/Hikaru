@@ -6,7 +6,7 @@ const projects = [
     name: "Hamzatronics Technologies",
     img: "/HAMZATRONICS.png",
     alt: "Hamzatronics",
-    link: "https://hamzatronics-technologies.vercel.app/",
+    link: "https://hamzatronics.com",
     role: "Developer",
     experience: "Intriguing Experience & quality knowledge acquired solving the bugs.",
     show: true,
