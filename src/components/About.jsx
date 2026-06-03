@@ -45,11 +45,11 @@ const About = () => {
           {/* Quick Stats */}
           <div className='flex gap-8 pt-6 border-t border-white/10'>
             <div className='text-left'>
-              <p className='text-3xl font-black text-orange-400'>6+</p>
+              <p className='text-3xl font-black text-orange-400'>20+</p>
               <p className='text-xs text-white/50 uppercase tracking-widest mt-1'>Projects</p>
             </div>
             <div className='text-left'>
-              <p className='text-3xl font-black text-orange-400'>2+</p>
+              <p className='text-3xl font-black text-orange-400'>3+</p>
               <p className='text-xs text-white/50 uppercase tracking-widest mt-1'>Years Exp</p>
             </div>
             <div className='text-left'>

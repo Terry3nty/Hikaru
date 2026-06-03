@@ -9,6 +9,8 @@ const skillInfo = [
     { img: "/python.png", text: "Python" },
     { img: "/cpp.jpg", text: "C++" },
     { img: "/n8n.png", text: "N8N" },
+    { img: "/rust.png", text: "Rust" },
+    { img: "/php.png", text: "PHP" },
 ]
 
 const Skills = () => {

@@ -44,6 +44,14 @@ const web3Products = [
         experience: 'Quality connection with both admins, community members & Game itself. Experienced quality & addictive gameplay, got in a creator contest & was among the winners',
         category: 'web3',
     },
+    {
+        name: 'SuiSub',
+        img: '/suisub.png', 
+        link: 'https://suisub-sui.vercel.app/',
+        role: 'Full-stack dev',
+        experience: ' Got to experience the developer side of the Sui blockchain and the rich resources',
+        category: 'web3',
+    }
 ];
 
 const techProducts = [
