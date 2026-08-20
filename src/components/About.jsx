@@ -30,7 +30,7 @@ const About = () => {
             </p>
 
             <p>
-              As a Mathematics undergraduate, I approach software development with analytical
+              As a Mathematics Student, I approach software development with analytical
               precision. I'm deeply passionate about architecting resilient applications,
               websites, and AI automations, constantly integrating the newest technologies.
             </p>
