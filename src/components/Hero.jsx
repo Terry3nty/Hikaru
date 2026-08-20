@@ -60,7 +60,7 @@ const Hero = () => {
           <div className="absolute -inset-2 bg-gradient-to-r from-orange-600 via-orange-400 to-orange-600 rounded-full blur-xl opacity-40 group-hover:opacity-100 transition-opacity duration-700 animate-pulse-slow" />
           <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full opacity-80" />
           <img
-            src="/sigh.jpg"
+            src="/3nty.png"
             alt="Hikaru Sama"
             className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 object-cover rounded-full border-2 border-orange-400/50"
           />

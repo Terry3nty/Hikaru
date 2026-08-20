@@ -12,9 +12,9 @@ const About = () => {
       </div>
 
       {/* Content Grid */}
-      <div className='grid md:grid-cols-2 gap-8 items-center'>
+      <div className='gap-8 items-center'>
         {/* Text Content in Glass Panel */}
-        <div className='card flex-1 h-full justify-center space-y-8 font-inter'>
+        <div className='h-full justify-center space-y-8 font-inter'>
           <p className='text-2xl md:text-3xl font-bold text-white leading-tight'>
             Hello, I'm{' '}
             <span className='bg-gradient-to-r from-orange-400 to-orange-200 bg-clip-text text-transparent'>
@@ -45,33 +45,33 @@ const About = () => {
           {/* Quick Stats */}
           <div className='flex gap-8 pt-6 border-t border-white/10'>
             <div className='text-left'>
-              <p className='text-3xl font-black text-orange-400'>20+</p>
+              <p className='text-3xl font-black text-orange-400'>Up to 20</p>
               <p className='text-xs text-white/50 uppercase tracking-widest mt-1'>Projects</p>
             </div>
             <div className='text-left'>
-              <p className='text-3xl font-black text-orange-400'>3+</p>
+              <p className='text-3xl font-black text-orange-400'>Up to 3</p>
               <p className='text-xs text-white/50 uppercase tracking-widest mt-1'>Years Exp</p>
             </div>
             <div className='text-left'>
-              <p className='text-3xl font-black text-orange-400'>5+</p>
+              <p className='text-3xl font-black text-orange-400'>Up to 5</p>
               <p className='text-xs text-white/50 uppercase tracking-widest mt-1'>Tech Stack</p>
             </div>
           </div>
         </div>
 
-        {/* Image in Glass Panel */}
+        {/* Image in Glass Panel
         <div className='relative group flex justify-center w-full h-full'>
           <div className='absolute -inset-4 bg-gradient-to-br from-orange-600/30 via-orange-500/10 to-orange-600/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700' />
 
           <div className='card w-full p-2 relative overflow-hidden flex items-center justify-center'>
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 z-10 pointer-events-none' />
             <img
-              src="/sigh.jpg"
+              src="/3nty.png"
               alt="Hikaru"
               className='w-full h-full object-cover rounded-lg transition-transform duration-700 group-hover:scale-105 grayscale-[20%] group-hover:grayscale-0'
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

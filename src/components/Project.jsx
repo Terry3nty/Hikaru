@@ -20,13 +20,12 @@ const projects = [
     show: true,
   },
   {
-    name: "Middlemint",
-    img: "/MIDDLEMINT.png",
-    alt: "Middlemint",
-    link: "https://middlemint-mdmt.vercel.app/",
-    role: "BD, Dev & DevRel",
-    experience: "Quality connection with both admins and community members and Devs.",
-    show: true,
+        name : 'CRTC', 
+        img: '/crtc.png', 
+        link : 'https://crtc-site.vercel.app/',
+        role: 'Full-Stack Developer',
+        experience: 'My first mobile application, will be released on playstore soon',
+        show: true,
   },
   {
     name: 'Gossiper Ai',
@@ -42,16 +41,15 @@ const projects = [
     link: 'https://suisub-sui.vercel.app/',
     role: 'Full-stack dev',
     experience: ' Got to experience the developer side of the Sui blockchain and the rich resources',
-    show: 'true',
+    show: true,
   },
   {
-    name: 'Stacy Ai',
-    img: '/Katsco.jpg',
-    alt: "Stacy Ai",
-    link: 'https://stacy-ai-website.vercel.app/',
-    role: 'Developer',
-    experience: 'Authentic bond with both admins and fellow developers, community members & team members',
-    show: true,
+        name: 'Network Rec',
+        img: '/Network_rec.jpg',
+        link: 'https://network-rec.vercel.app/', 
+        role: 'Full-stack Developer',
+        experience: 'Born out of frustration of not knowing what network is the best in an area',
+        show: true
   },
 ];
 

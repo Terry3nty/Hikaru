@@ -5,14 +5,6 @@ import { HiArrowLeft, HiExternalLink } from 'react-icons/hi';
 
 const web3Products = [
     {
-        name: 'Fostrum',
-        img: '/fostrum.png',
-        link: 'https://fostrum.xyz',
-        role: 'Frontend Developer',
-        experience: 'Great joy and enthusiasm as we brought "that idea" to life',
-        category: 'web3',
-    },
-    {
         name: 'Sign',
         img: '/Sign.jpg',
         link: 'https://x.com/sign',
@@ -45,23 +37,12 @@ const web3Products = [
         category: 'web3',
     },
     {
-        name: 'SuiSub',
-        img: '/suisub.png', 
-        link: 'https://suisub-sui.vercel.app/',
-        role: 'Full-stack dev',
-        experience: ' Got to experience the developer side of the Sui blockchain and the rich resources',
-        category: 'web3',
-    }
-];
-
-const techProducts = [
-    {
         name: 'Middlemint',
         img: '/MIDDLEMINT.png',
         link: 'https://middlemint-mdmt.vercel.app/',
         role: 'Fullstack Developer',
         experience: 'Quality connection with both admins and community members.',
-        category: 'tech',
+        category: 'web3',
     },
     {
         name: 'Phoenix Community',
@@ -69,6 +50,41 @@ const techProducts = [
         link: 'https://phoenix-delta-two.vercel.app/',
         role: 'FullstackDeveloper, Marketer',
         experience: 'Deep connection with both admins, community members & Devs.',
+        category: 'web3',
+    },
+    {
+        name: 'SuiSub',
+        img: '/suisub.png', 
+        link: 'https://suisub-sui.vercel.app/',
+        role: 'Full-stack dev',
+        experience: ' Got to experience the developer side of the Sui blockchain and the rich resources',
+        category: 'web3',
+    },
+    {
+        name: 'Douglas',
+        img : '/douglas.png',
+        link: 'https://douglashood.xyz',
+        role: 'Developer',
+        experience: '1,111 loyal dogs surviving every cycle @robinhoodcrypto',
+        category: 'web3'
+    },
+    {
+        name: 'DogHunt',
+        img: '/DogHunt.png',
+        link: 'https://doghunt.vercel.app/',
+        role: 'Full-stack dev', 
+        experience: ' Got to experience three.js for the first time in my life and what i could do with it',
+        category: 'web3'
+    }
+];
+
+const techProducts = [
+    {
+        name: 'Fostrum',
+        img: '/fostrum.png',
+        link: 'https://fostrum.xyz',
+        role: 'Frontend Developer',
+        experience: 'Great joy and enthusiasm as we brought "that idea" to life',
         category: 'tech',
     },
     {
@@ -80,10 +96,10 @@ const techProducts = [
         category: 'tech',
     },
     {
-        name: 'Podcast Website',
-        img: '/Katsco.jpg',
+        name: 'Uny ',
+        img: '/Uny.png',
         link: '#',
-        role: 'Frontend Developer',
+        role: 'Full-Stack Developer',
         experience: 'Quality connection with both admins, community members and colleagues.',
         comingSoon: true,
         category: 'tech',
@@ -104,9 +120,34 @@ const techProducts = [
         experience: 'Authentic bond with team members and developers, got to use new technology too',
         category: 'tech',
     },
+    {
+        name : 'CRTC', 
+        img: '/crtc.png', 
+        link : 'https://crtc-site.vercel.app/',
+        role: 'Full-Stack Developer',
+        experience: 'My first mobile application, will be released on playstore soon',
+        category: 'tech',
+    }
+    
 ];
 
 const hobbyProducts = [
+    {
+        name: 'Network Rec',
+        img: '/Network_rec.jpg',
+        link: 'https://network-rec.vercel.app/', 
+        role: 'Full-stack Developer',
+        experience: 'Born out of frustration of not knowing what network is the best in an area',
+        category:'hobby',
+    },
+    {
+        name: 'Rheon',
+        img:'/Rheon.png',
+        link: 'https://rheon.space',
+        role: 'Fiull-stack Developer',
+        experience: 'Born out of frustration of having to manually drag nodes up and down to automate',
+        category:'hobby',
+    },
     {
         name: 'AI Writer',
         img: '/sigh.jpg',
