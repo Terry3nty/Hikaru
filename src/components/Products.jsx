@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { HiArrowLeft, HiExternalLink } from 'react-icons/hi';
@@ -193,30 +193,30 @@ const allProducts = [...web3Products, ...techProducts, ...hobbyProducts];
 
 const ProductCard = ({ product, index }) => (
     <div
-        className="group relative bg-gradient-to-br from-orange-900/20 via-black/40 to-orange-900/10 rounded-2xl overflow-hidden border border-orange-500/10 hover:border-orange-500/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(249,115,22,0.15)] hover:-translate-y-2"
+        className="product-card group relative bg-gradient-to-br from-orange-900/20 via-black/40 to-orange-900/10 rounded-xl sm:rounded-2xl overflow-hidden border border-orange-500/10 hover:border-orange-500/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(249,115,22,0.15)] hover:-translate-y-2"
         style={{ animationDelay: `${index * 50}ms` }}
     >
         {/* Image Container */}
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-28 sm:h-48 overflow-hidden">
             <img
                 src={product.img}
                 alt={product.name}
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
             />
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60" />
+            <div className="product-image-overlay absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60" />
 
             {/* Category Badge */}
-            <div className="absolute top-3 right-3">
-                <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full text-orange-300">
+            <div className="absolute top-2 right-2 sm:top-3 sm:right-3">
+                <span className="px-2 py-0.5 sm:px-3 sm:py-1 text-[9px] sm:text-xs font-medium uppercase tracking-wider bg-orange-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full text-orange-300">
                     {product.category}
                 </span>
             </div>
 
             {/* Coming Soon Badge */}
             {product.comingSoon && (
-                <div className="absolute top-3 left-3">
-                    <span className="px-3 py-1 text-xs font-medium uppercase tracking-wider bg-amber-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full text-amber-300">
+                <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                    <span className="px-2 py-0.5 sm:px-3 sm:py-1 text-[9px] sm:text-xs font-medium uppercase tracking-wider bg-amber-500/20 backdrop-blur-sm border border-amber-500/30 rounded-full text-amber-300">
                         Coming Soon
                     </span>
                 </div>
@@ -227,19 +227,19 @@ const ProductCard = ({ product, index }) => (
         </div>
 
         {/* Content */}
-        <div className="p-5 space-y-3">
+        <div className="p-3 sm:p-5 space-y-2 sm:space-y-3">
             {/* Title */}
-            <h3 className="font-lexendDeca font-bold text-lg text-white group-hover:text-orange-300 transition-colors duration-300 line-clamp-1">
+            <h3 className="font-lexendDeca font-bold text-sm sm:text-lg text-white group-hover:text-orange-300 transition-colors duration-300 line-clamp-1">
                 {product.name}
             </h3>
 
             {/* Role Badge */}
             <div className="flex items-center gap-2">
-                <span className="text-xs text-orange-400 font-medium">{product.role}</span>
+                <span className="text-[10px] sm:text-xs text-orange-400 font-medium line-clamp-1">{product.role}</span>
             </div>
 
             {/* Experience */}
-            <p className="text-sm text-white/50 leading-relaxed line-clamp-2">
+            <p className="text-xs sm:text-sm text-white/50 leading-relaxed line-clamp-2">
                 {product.experience}
             </p>
 
@@ -248,7 +248,7 @@ const ProductCard = ({ product, index }) => (
                 href={product.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center gap-2 mt-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${product.comingSoon
+                className={`inline-flex w-full items-center justify-center gap-1 sm:gap-2 mt-1 sm:mt-2 px-2 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${product.comingSoon
                     ? 'bg-white/5 text-white/40 cursor-not-allowed'
                     : 'bg-orange-500/10 text-orange-400 border border-orange-500/30 hover:bg-orange-500/20 hover:border-orange-400 hover:text-white group/btn'
                     }`}
@@ -268,6 +268,27 @@ const ProductCard = ({ product, index }) => (
 
 const Products = () => {
     const [activeCategory, setActiveCategory] = useState('all');
+
+    useEffect(() => {
+        const previousTitle = document.title;
+        const descriptionMeta = document.querySelector('meta[name="description"]');
+        const canonicalLink = document.querySelector('link[rel="canonical"]');
+        const previousDescription = descriptionMeta?.getAttribute('content');
+        const previousCanonical = canonicalLink?.getAttribute('href');
+
+        document.title = 'Projects by Trinity Adeleye | Web, Mobile & Web3 Work';
+        descriptionMeta?.setAttribute(
+            'content',
+            'Explore software projects, Web3 products, collaborations, and technical experiments built or supported by Trinity Adeleye.'
+        );
+        canonicalLink?.setAttribute('href', 'https://www.hikarusama.xyz/products');
+
+        return () => {
+            document.title = previousTitle;
+            if (previousDescription) descriptionMeta?.setAttribute('content', previousDescription);
+            if (previousCanonical) canonicalLink?.setAttribute('href', previousCanonical);
+        };
+    }, []);
 
     const filteredProducts =
         activeCategory === 'all'
@@ -345,7 +366,7 @@ const Products = () => {
             </div>
 
             {/* Projects Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
                 {filteredProducts.map((product, index) => (
                     <ProductCard key={product.name + index} product={product} index={index} />
                 ))}

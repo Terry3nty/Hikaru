@@ -49,6 +49,272 @@ body {
   background-position: -1px -1px;
   background-attachment: fixed;
   min-height: 100vh;
+  transition: background-color 0.45s ease, color 0.45s ease;
+}
+
+/* Floating light-mode control */
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  flex-shrink: 0;
+  border: 1px solid rgba(249, 115, 22, 0.45);
+  border-radius: 9999px;
+  color: #fb923c;
+  background: rgba(249, 115, 22, 0.12);
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.28);
+  cursor: pointer;
+  transition: transform 0.35s ease, color 0.45s ease, background-color 0.45s ease, border-color 0.45s ease, box-shadow 0.45s ease;
+}
+
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: inherit;
+  background: #050505;
+  transition: background-color 0.45s ease;
+}
+
+.theme-toggle__icon {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  font-size: 1.1rem;
+  transition: color 0.45s ease, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 24px rgba(249, 115, 22, 0.5);
+}
+
+.theme-toggle--light {
+  color: #ea580c;
+  background: rgba(255, 237, 213, 0.9);
+  border-color: rgba(234, 88, 12, 0.55);
+  box-shadow: 0 0 24px rgba(249, 115, 22, 0.35);
+  animation: theme-pop 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle--light::before {
+  background: #fffaf5;
+}
+
+.theme-toggle--light .theme-toggle__icon {
+  transform: rotate(180deg) scale(1.08);
+}
+
+@keyframes theme-pop {
+  0% {
+    transform: scale(0.85);
+    box-shadow: 0 0 0 rgba(249, 115, 22, 0);
+  }
+
+  55% {
+    transform: scale(1.12);
+    box-shadow: 0 0 34px rgba(249, 115, 22, 0.55);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 24px rgba(249, 115, 22, 0.35);
+  }
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid #fb923c;
+  outline-offset: 4px;
+}
+
+/* Light version of the existing orange theme */
+[data-theme="light"] body {
+  background: #fffaf5;
+  background-image: linear-gradient(rgba(249, 115, 22, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.07) 1px, transparent 1px);
+  color: #1c1917;
+}
+
+[data-theme="light"] .text-white,
+[data-theme="light"] [class~="text-white"] {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] [class~="text-white/80"] {
+  color: rgba(28, 25, 23, 0.8) !important;
+}
+
+[data-theme="light"] [class~="text-white/70"] {
+  color: rgba(28, 25, 23, 0.7) !important;
+}
+
+[data-theme="light"] [class~="text-white/60"] {
+  color: rgba(28, 25, 23, 0.62) !important;
+}
+
+[data-theme="light"] [class~="text-white/50"] {
+  color: rgba(28, 25, 23, 0.54) !important;
+}
+
+[data-theme="light"] [class~="text-white/40"] {
+  color: rgba(28, 25, 23, 0.46) !important;
+}
+
+[data-theme="light"] [class~="text-white/30"] {
+  color: rgba(28, 25, 23, 0.38) !important;
+}
+
+[data-theme="light"] [class~="bg-white/5"] {
+  background-color: rgba(124, 45, 18, 0.05) !important;
+}
+
+[data-theme="light"] [class~="bg-black/40"] {
+  background-color: rgba(255, 247, 237, 0.8) !important;
+}
+
+[data-theme="light"] [class*="bg-[#050505]"] {
+  background-color: rgba(255, 250, 245, 0.92) !important;
+}
+
+[data-theme="light"] [class~="border-white/5"],
+[data-theme="light"] [class~="border-white/10"] {
+  border-color: rgba(124, 45, 18, 0.13) !important;
+}
+
+[data-theme="light"] [class*="from-white"] {
+  --tw-gradient-from: #292524 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(41 37 36 / 0) var(--tw-gradient-to-position) !important;
+}
+
+[data-theme="light"] [class*="via-neutral-200"] {
+  --tw-gradient-via: #57534e var(--tw-gradient-via-position) !important;
+}
+
+[data-theme="light"] [class*="to-neutral-500"] {
+  --tw-gradient-to: #a8a29e var(--tw-gradient-to-position) !important;
+}
+
+[data-theme="light"] [class*="via-black"] {
+  --tw-gradient-via: rgba(255, 247, 237, 0.72) var(--tw-gradient-via-position) !important;
+}
+
+[data-theme="light"] .glass {
+  background: rgba(255, 250, 245, 0.86);
+  border-color: rgba(249, 115, 22, 0.15);
+}
+
+[data-theme="light"] .glass-card,
+[data-theme="light"] .card,
+[data-theme="light"] .Scard {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(124, 45, 18, 0.12);
+  box-shadow: 0 12px 40px rgba(124, 45, 18, 0.05);
+}
+
+[data-theme="light"] .glass-card:hover,
+[data-theme="light"] .card:hover,
+[data-theme="light"] .Scard:hover {
+  background: rgba(255, 247, 237, 0.92);
+  border-color: rgba(249, 115, 22, 0.34);
+}
+
+[data-theme="light"] .input {
+  color: #1c1917;
+  border-bottom-color: rgba(124, 45, 18, 0.24);
+}
+
+[data-theme="light"] .input::placeholder {
+  color: rgba(28, 25, 23, 0.42);
+}
+
+[data-theme="light"] .gradient-border {
+  background: linear-gradient(#fffaf5, #fffaf5) padding-box,
+    linear-gradient(135deg, #fb923c, #f97316, #fb923c) border-box;
+}
+
+[data-theme="light"] .btn-primary::after {
+  background: #fffaf5;
+}
+
+/* Compact homepage project cards for the two-column mobile grid */
+.project-card {
+  width: 100%;
+  padding: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .project-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Strong, consistent light-mode surfaces */
+[data-theme="light"] [class~="bg-white"][class~="text-black"] {
+  background-color: #1c1917 !important;
+  border-color: #1c1917 !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 28px rgba(28, 25, 23, 0.16);
+}
+
+[data-theme="light"] [class~="bg-white"][class~="text-black"]:hover {
+  background-color: #292524 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] [class~="bg-white"][class~="text-black"] span {
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .product-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 237, 0.9));
+  border-color: rgba(234, 88, 12, 0.16);
+  box-shadow: 0 12px 32px rgba(124, 45, 18, 0.07);
+}
+
+[data-theme="light"] .product-card:hover {
+  border-color: rgba(234, 88, 12, 0.42);
+  box-shadow: 0 18px 42px rgba(124, 45, 18, 0.12);
+}
+
+[data-theme="light"] .project-image-overlay {
+  background: linear-gradient(to top, rgba(255, 250, 245, 0.32), transparent 70%);
+}
+
+[data-theme="light"] .product-image-overlay {
+  background: linear-gradient(to top, rgba(28, 25, 23, 0.68), rgba(28, 25, 23, 0.16), transparent);
+}
+
+[data-theme="light"] .mouse-tracker {
+  mix-blend-mode: multiply;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: rgba(255, 247, 237, 0.9);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(249, 115, 22, 0.82), rgba(234, 88, 12, 0.48));
+}
+
+@media (max-width: 767px), (pointer: coarse) {
+  .mouse-tracker {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle,
+  .theme-toggle__icon,
+  body {
+    transition: none;
+  }
+
+  .theme-toggle--light {
+    animation: none;
+  }
 }
 
 /* Blinking Cursor Animation for Typewriter */

@@ -73,12 +73,12 @@ const Project = () => (
     </Link>
 
     {/* Project Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
       {projects.map(
         (proj, idx) =>
           proj.show && (
             <div
-              className="card group relative overflow-hidden"
+              className="card project-card group relative overflow-hidden"
               key={idx}
               style={{ animationDelay: `${idx * 100}ms` }}
             >
@@ -86,25 +86,25 @@ const Project = () => (
               <div className="absolute inset-0 bg-gradient-to-b from-orange-500/0 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
               {/* Project Image Note: the img tag is styled via global CSS (.img) */}
-              <div className="relative overflow-hidden mb-6 p-1 border border-white/5 bg-black/40 rounded-lg">
+              <div className="relative overflow-hidden mb-3 sm:mb-6 p-0.5 sm:p-1 border border-white/5 bg-black/40 rounded-lg">
                 <img
                   src={proj.img}
-                  alt={proj.alt}
-                  className="w-full h-48 object-cover rounded-md transition-all duration-700 group-hover:scale-105 group-hover:brightness-110 grayscale-[10%] group-hover:grayscale-0"
+                  alt={proj.alt || proj.name + ' project preview'}
+                  className="w-full h-28 sm:h-48 object-cover rounded-md transition-all duration-700 group-hover:scale-105 group-hover:brightness-110 grayscale-[10%] group-hover:grayscale-0"
                 />
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none" />
+                <div className="project-image-overlay absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none" />
               </div>
 
               {/* Project Info */}
-              <div className="flex flex-col gap-3 flex-1 relative z-10">
-                <h3 className="font-bold text-xl text-white group-hover:text-orange-300 transition-colors duration-500 tracking-tight">
+              <div className="flex flex-col gap-1.5 sm:gap-3 flex-1 relative z-10">
+                <h3 className="font-bold text-sm sm:text-xl text-white line-clamp-1 group-hover:text-orange-300 transition-colors duration-500 tracking-tight">
                   {proj.name}
                 </h3>
-                <p className="text-xs font-semibold tracking-widest uppercase text-orange-400/80">
+                <p className="text-[9px] sm:text-xs font-semibold tracking-wide sm:tracking-widest uppercase text-orange-400/80 line-clamp-1">
                   <span className="text-white/40 font-normal">ROLE //</span> {proj.role}
                 </p>
-                <p className="text-sm text-white/50 leading-relaxed mt-1">
+                <p className="text-xs sm:text-sm text-white/50 leading-relaxed mt-1 line-clamp-2">
                   {proj.experience}
                 </p>
               </div>
@@ -114,9 +114,9 @@ const Project = () => (
                 href={proj.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-sm text-xs font-bold tracking-[0.2em] text-white/70 border border-white/10 hover:border-orange-500 hover:bg-orange-500/10 hover:text-orange-400 transition-all duration-500 group/btn relative overflow-hidden"
+                className="mt-3 sm:mt-6 inline-flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-3 px-2 sm:px-4 rounded-sm text-[9px] sm:text-xs font-bold tracking-[0.08em] sm:tracking-[0.2em] text-white/70 border border-white/10 hover:border-orange-500 hover:bg-orange-500/10 hover:text-orange-400 transition-all duration-500 group/btn relative overflow-hidden"
               >
-                <span className="relative z-10">VIEW CASE STUDY</span>
+                <span className="relative z-10"><span className="sm:hidden">VIEW</span><span className="hidden sm:inline">VIEW CASE STUDY</span></span>
                 <span className="group-hover/btn:translate-x-2 transition-transform duration-500 text-orange-500 relative z-10">→</span>
               </a>
             </div>

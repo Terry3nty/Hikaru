@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { HiMenuAlt3, HiMoon, HiSun, HiX } from "react-icons/hi";
 
 const navLinks = [
     { to: "home", label: "Home" },
@@ -10,7 +10,7 @@ const navLinks = [
     { to: "contact", label: "Contact" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ isLight, onToggleTheme }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -64,13 +64,30 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                {/* Mobile Menu Button */}
-                <button
-                    onClick={toggleMenu}
-                    className="md:hidden text-white/80 hover:text-orange-400 transition-colors duration-300 text-2xl"
-                >
-                    {isOpen ? <HiX /> : <HiMenuAlt3 />}
-                </button>
+                <div className="flex items-center gap-3">
+                    {/* Theme Toggle */}
+                    <button
+                        type="button"
+                        className={"theme-toggle" + (isLight ? " theme-toggle--light" : "")}
+                        onClick={onToggleTheme}
+                        aria-label={isLight ? "Switch to dark mode" : "Switch to light mode"}
+                        aria-pressed={isLight}
+                        title={isLight ? "Switch to dark mode" : "Switch to light mode"}
+                    >
+                        <span className="theme-toggle__icon" aria-hidden="true">
+                            {isLight ? <HiMoon /> : <HiSun />}
+                        </span>
+                    </button>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        onClick={toggleMenu}
+                        className="md:hidden text-white/80 hover:text-orange-400 transition-colors duration-300 text-2xl"
+                        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+                    >
+                        {isOpen ? <HiX /> : <HiMenuAlt3 />}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}

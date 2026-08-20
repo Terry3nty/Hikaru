@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6"
+
+const emailJsConfig = {
+  VITE_EMAILJS_SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  VITE_EMAILJS_TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  VITE_EMAILJS_PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+}
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -8,27 +14,42 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState(""); // 'sending', 'success', 'error'
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const missingVariables = Object.entries(emailJsConfig)
+      .filter(([, value]) => !value)
+      .map(([key]) => key);
+
+    if (missingVariables.length > 0) {
+      console.error('Missing EmailJS environment variables:', missingVariables.join(', '));
+      setStatus('error');
+      setTimeout(() => setStatus(''), 3000);
+      return;
+    }
+
+    const form = e.currentTarget;
     setStatus('sending');
 
-    emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      e.target,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    ).then((result) => {
+    try {
+      const result = await emailjs.sendForm(
+        emailJsConfig.VITE_EMAILJS_SERVICE_ID,
+        emailJsConfig.VITE_EMAILJS_TEMPLATE_ID,
+        form,
+        { publicKey: emailJsConfig.VITE_EMAILJS_PUBLIC_KEY }
+      );
+
       console.log("Success:", result.text);
       setStatus('success');
       setName("");
       setEmail("");
       setMessage("");
-      setTimeout(() => setStatus(''), 3000);
-    }, (error) => {
-      console.log("Error:", error.text);
+    } catch (error) {
+      console.error("EmailJS error:", error?.text || error?.message || error);
       setStatus('error');
-      setTimeout(() => setStatus(''), 3000);
-    })
+    }
+
+    setTimeout(() => setStatus(''), 3000);
   }
 
   return (
@@ -145,7 +166,7 @@ const Contact = () => {
                 <FaLinkedin className="text-xl text-white/70 group-hover:text-orange-400 group-hover:scale-110 transition-all duration-300" />
               </a>
               <a
-                href="https://x.com/hikaru___san"
+                href="https://x.com/Terry3nty"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-orange-500/20 hover:border-orange-400 hover:bg-orange-500/10 transition-all duration-300"
@@ -153,7 +174,7 @@ const Contact = () => {
                 <FaXTwitter className="text-xl text-white/70 group-hover:text-orange-400 group-hover:scale-110 transition-all duration-300" />
               </a>
               <a
-                href="https://www.instagram.com/hikaru____sama"
+                href="https://www.instagram.com/Terry3nty"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-orange-500/20 hover:border-orange-400 hover:bg-orange-500/10 transition-all duration-300"

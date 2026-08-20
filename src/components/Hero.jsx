@@ -120,7 +120,7 @@ const Hero = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://x.com/hikaru___san"
+            href="https://x.com/Terry3nty"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-orange-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.8)] transition-all duration-300"
@@ -128,7 +128,7 @@ const Hero = () => {
             <FaXTwitter />
           </a>
           <a
-            href="https://www.instagram.com/hikaru____sama"
+            href="https://www.instagram.com/Terry3nty"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-orange-400 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(249,115,22,0.8)] transition-all duration-300"
