@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from "react-scroll";
 import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6"
 
 const roles = ["WEB DEVELOPER", "MOBILE DEVELOPER", "WEB3 DEVELOPER"];
@@ -89,8 +88,8 @@ const Hero = () => {
         </div>
 
         {/* CTA Button */}
-        <Link to="contact" smooth={true} duration={500}>
-          <button className="group relative mt-8 md:mt-12 px-10 py-4 font-inter font-bold tracking-[0.2em] overflow-hidden rounded-sm transition-all duration-500 bg-white text-black hover:bg-transparent">
+        <a href="#contact">
+          <span className="group relative mt-8 md:mt-12 px-10 py-4 font-inter font-bold tracking-[0.2em] overflow-hidden rounded-sm transition-all duration-500 bg-white text-black hover:bg-transparent">
             {/* Button gradient border on hover */}
             <span className="absolute inset-0 border border-transparent group-hover:border-orange-500 transition-colors duration-500" />
             {/* Glow effect */}
@@ -98,8 +97,8 @@ const Hero = () => {
             <span className="relative group-hover:text-orange-400 transition-colors duration-500">
               LET'S COLLABORATE
             </span>
-          </button>
-        </Link>
+          </span>
+        </a>
 
         {/* Social Links */}
         <div className="flex gap-6 text-2xl md:text-3xl text-white/70 mt-4">

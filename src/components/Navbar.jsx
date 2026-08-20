@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
 import { HiMenuAlt3, HiMoon, HiSun, HiX } from "react-icons/hi";
 
 const navLinks = [
@@ -39,27 +38,25 @@ const Navbar = ({ isLight, onToggleTheme }) => {
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
-                <h1 className="font-inter text-2xl md:text-3xl font-black tracking-tighter cursor-pointer group flex items-center gap-2">
+                <a href="/" aria-label="Trinity Adeleye home" className="font-inter text-2xl md:text-3xl font-black tracking-tighter cursor-pointer group flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(234,88,12,0.8)]" />
                     <span className="text-white group-hover:text-orange-100 transition-colors duration-500">
-                        HIKARU
+                        3NTY
                     </span>
-                </h1>
+                </a>
 
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex items-center gap-10 font-inter text-xs font-bold tracking-[0.2em] uppercase">
                     {navLinks.map((link, idx) => (
                         <li key={idx}>
-                            <Link
-                                to={link.to}
-                                smooth={true}
-                                duration={500}
+                            <a
+                                href={"/#" + link.to}
                                 className="relative text-white/50 hover:text-white transition-colors duration-500 cursor-pointer group py-2"
                             >
                                 <span className="relative z-10">{link.label}</span>
                                 {/* Glow dot on hover */}
                                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_8px_rgba(234,88,12,0.8)]" />
-                            </Link>
+                            </a>
                         </li>
                     ))}
                 </ul>
@@ -99,16 +96,14 @@ const Navbar = ({ isLight, onToggleTheme }) => {
                     <ul className="flex flex-col gap-6 font-inter text-xs font-bold tracking-[0.2em] uppercase">
                         {navLinks.map((link, idx) => (
                             <li key={idx}>
-                                <Link
-                                    to={link.to}
-                                    smooth={true}
-                                    duration={500}
+                                <a
+                                    href={"/#" + link.to}
                                     onClick={closeMenu}
                                     className="block py-2 text-white/50 hover:text-white hover:translate-x-2 transition-all duration-500 flex items-center gap-4 group"
                                 >
                                     <span className="w-1 h-1 rounded-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[0_0_8px_rgba(234,88,12,0.8)]" />
                                     {link.label}
-                                </Link>
+                                </a>
                             </li>
                         ))}
                     </ul>

@@ -1,0 +1,17 @@
+{
+  "name": "Trinity Adeleye | Software Developer",
+  "short_name": "3NTY",
+  "description": "Portfolio of Trinity Adeleye, a mobile, web, and Web3 developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/3nty.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.hikarusama.xyz/sitemap.xml
+Sitemap: https://www.3nty.xyz/sitemap.xml

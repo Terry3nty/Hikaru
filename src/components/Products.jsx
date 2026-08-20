@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
 import { HiArrowLeft, HiExternalLink } from 'react-icons/hi';
 
 const web3Products = [
@@ -269,26 +268,6 @@ const ProductCard = ({ product, index }) => (
 const Products = () => {
     const [activeCategory, setActiveCategory] = useState('all');
 
-    useEffect(() => {
-        const previousTitle = document.title;
-        const descriptionMeta = document.querySelector('meta[name="description"]');
-        const canonicalLink = document.querySelector('link[rel="canonical"]');
-        const previousDescription = descriptionMeta?.getAttribute('content');
-        const previousCanonical = canonicalLink?.getAttribute('href');
-
-        document.title = 'Projects by Trinity Adeleye | Web, Mobile & Web3 Work';
-        descriptionMeta?.setAttribute(
-            'content',
-            'Explore software projects, Web3 products, collaborations, and technical experiments built or supported by Trinity Adeleye.'
-        );
-        canonicalLink?.setAttribute('href', 'https://www.hikarusama.xyz/products');
-
-        return () => {
-            document.title = previousTitle;
-            if (previousDescription) descriptionMeta?.setAttribute('content', previousDescription);
-            if (previousCanonical) canonicalLink?.setAttribute('href', previousCanonical);
-        };
-    }, []);
 
     const filteredProducts =
         activeCategory === 'all'
@@ -385,15 +364,13 @@ const Products = () => {
                 <p className="text-white/50 mb-6 max-w-md mx-auto">
                     I'm always open to discussing new projects and opportunities.
                 </p>
-                <ScrollLink
-                    to="contact"
-                    smooth={true}
-                    duration={500}
+                <a
+                    href="/#contact"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500/20 border border-orange-500/40 rounded-xl text-orange-300 hover:bg-orange-500/30 hover:border-orange-400 hover:text-white transition-all duration-300 cursor-pointer"
                 >
                     Get in Touch
                     <span>→</span>
-                </ScrollLink>
+                </a>
             </div>
         </section>
     );
