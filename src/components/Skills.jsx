@@ -6,10 +6,7 @@ const skillInfo = [
     { img: "/React.svg", text: "React/Vite" },
     { img: "/next.png", text: "Nextjs" },
     { img: "/typescript.svg", text: "TypeScript" },
-    { img: "/python.png", text: "Python" },
     { img: "/cpp.jpg", text: "C++" },
-    { img: "/n8n.png", text: "N8N" },
-    { img: "/rust.png", text: "Rust" },
     { img: "/go.png", text: "Go"}
 ]
 
