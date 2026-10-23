@@ -52,10 +52,6 @@ const About = () => {
               <p className='text-3xl font-black text-orange-400'>Up to 3</p>
               <p className='text-xs text-white/50 uppercase tracking-widest mt-1'>Years Exp</p>
             </div>
-            <div className='text-left'>
-              <p className='text-3xl font-black text-orange-400'>Up to 5</p>
-              <p className='text-xs text-white/50 uppercase tracking-widest mt-1'>Tech Stack</p>
-            </div>
           </div>
         </div>
 
