@@ -12,12 +12,12 @@ const projects = [
     show: true,
   },
   {
-    name: 'Fostrum',
-    img: '/fostrum.png',
-    link: 'https://fostrum.xyz',
-    role: 'Frontend Developer',
-    experience: 'Great joy and enthusiasm as we brought "that idea" to life',
-    show: true,
+    name: 'Rheon',
+    img:'/Rheon.png',
+    link: 'https://rheon.space',
+    role: 'Fiull-stack Developer',
+    experience: 'Born out of frustration of having to manually drag nodes up and down to automate',
+    show:true,
   },
   {
         name : 'CRTC', 
